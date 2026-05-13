@@ -1,0 +1,22 @@
+name: my first workflow in action
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-lastest
+    steps:
+      -  name: step1
+         run: echo "welcome to job 1"
+
+      -  name: step2
+         run: echo "this is workflow in action"
+
+      - name: show hostname
+        run: hostname
+
+      - name: show pwd
+        run: pwd
